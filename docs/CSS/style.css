@@ -1,0 +1,212 @@
+/* Main */
+
+:root {
+    --background: #F5F3EF;
+    --accentPrimary: #703017;
+    --accentSecondary: #32584C;
+    --textColor: #181717;
+    --fontPrimary: 'Roboto', sans-serif;
+    --fontSecondary: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 2% 3%;
+    background-color: var(--background);
+}
+
+#container {
+    margin: 0% 5%;
+}
+
+/* Text  */
+
+h1, h2, p, a {
+    color: var(--textColor);
+    margin: 0;
+}
+
+h1, h2, a {
+    font-family: var(--fontSecondary);
+    text-transform: lowercase;
+}
+
+h1 {
+    font-size: 55px;
+    font-weight: 600;
+    letter-spacing: -0.08em;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: -0.05em;
+}
+
+a {
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: var(--accentSecondary);
+    text-decoration: none;
+}
+
+p {
+    font-family: var(--fontPrimary);
+    font-size: 18px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* Nav */
+
+header a {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+}
+
+header h1 {
+    color: var(--accentPrimary);
+}
+
+header h1:hover{
+    color: var(--accentSecondary);
+}
+
+header #primaryNav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 25%;
+}
+
+header #primaryNav li a {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+header #primaryNav li a:hover{
+    color: var(--accentSecondary);
+    text-decoration: underline;
+}
+
+/* Hero */
+
+.hero {
+    height: 90vh;
+}
+
+/* Home Hero */
+
+#homeHero .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 84%;
+}
+
+#homeHero .content h1 {
+    color: var(--accentPrimary);
+    text-align: center;
+    margin: 0%;
+}
+
+#homeHero .content h2 {
+    text-align: center;
+    margin: 0%;
+}
+
+#homeHero .content #subtitleAltText {
+    color: var(--accentSecondary);
+}
+
+/* About Hero */
+
+#aboutHero .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 84%;
+    display: flex;
+    align-items: center;
+    gap: 2%;
+}
+
+#aboutHero .content #aboutText{
+    height: 410px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#aboutHero .content #aboutText #aboutAltText{
+    color: var(--accentPrimary);
+}
+
+#aboutHero .content img {
+    width: 481px;
+    height: 410px;
+    object-fit: cover;
+}
+
+#aboutHero .content #skillsGrid {
+    display: grid;
+    grid-template-areas: 
+    "skillType1 skillDetails1"
+    "skillType2 skillDetails2"
+    "skillType3 skillDetails3";
+    column-gap: 110px;
+    row-gap: 10px;
+}
+
+#aboutHero .content #skillsGrid p {
+    text-transform: lowercase;
+}
+
+#aboutHero .content #skillsGrid .skillType {
+    color: var(--accentSecondary);
+}
+
+
+#aboutHero .content #skills .skillType {
+    color: var(--accentSecondary);
+}
+
+/* Footer  */
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer h1 {
+    font-family: var(--fontSecondary);
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: -0.05em;
+    color: var(--accentSecondary);
+}
+
+#footerItems {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style-type: none;
+}
