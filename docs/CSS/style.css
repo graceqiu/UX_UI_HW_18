@@ -60,8 +60,6 @@ p {
 
 .subtext {
     color: var(--accentSecondary);   
-    font-size: 14px;
-    margin: 0;
 }
 
 ul {
@@ -109,9 +107,9 @@ header #primaryNav li a:hover{
     text-decoration: underline;
 }
 
-/* Hero */
+/* Sections */
 
-.hero {
+.fullPageSection {
     height: 90vh;
 }
 
@@ -166,11 +164,16 @@ header #primaryNav li a:hover{
     gap: 20px;
 }
 
+#projects .projectCard .projectText .projectDesc .subtext{
+    font-size: 14px;
+    margin: 0;
+}
+
 #projects .projectCard .projectText h2 {
     color: var(--accentPrimary);
 }
 
-/* About Hero */
+/* About: Hero */
 
 #aboutHero .content {
     position: absolute;
@@ -203,9 +206,9 @@ header #primaryNav li a:hover{
 #aboutHero .content #skillsGrid {
     display: grid;
     grid-template-areas: 
-    "skillType1 skillDetails1"
-    "skillType2 skillDetails2"
-    "skillType3 skillDetails3";
+    "skillType skillDetails"
+    "skillType skillDetails"
+    "skillType skillDetails";
     column-gap: 110px;
     row-gap: 10px;
 }
@@ -218,9 +221,26 @@ header #primaryNav li a:hover{
     color: var(--accentSecondary);
 }
 
+/* About: Background */
 
-#aboutHero .content #skills .skillType {
-    color: var(--accentSecondary);
+#aboutBackground {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+#aboutBackground #backgroundTitle {
+    display: flex;
+    justify-content: space-between;
+}
+
+#aboutBackground #backgroundTitle #titleAlt {
+    color: var(--accentPrimary);
+}
+
+#aboutBackground h1 {
+    color: var(--accentPrimary);
 }
 
 /* Footer  */
