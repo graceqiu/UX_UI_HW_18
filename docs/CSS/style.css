@@ -18,6 +18,26 @@ body {
     margin: 0% 5%;
 }
 
+/* Arrow Links */
+
+.arrowLink {
+    display: none;
+}
+
+.material-icons.md-48 { 
+    font-size: 48px; 
+    margin-bottom: 10%;
+    color: var(--accentPrimary);
+}
+
+.material-icons.md-48:hover + .arrowLink {
+    font-size: 36px; 
+    margin-bottom: 10%;
+    color: var(--accentSecondary);
+    transition: .1s;
+    display: block;
+}
+
 /* Text  */
 
 h1, h2, p, a {
@@ -58,12 +78,20 @@ p {
     font-size: 18px;
 }
 
-.subtext {
+ul {
+    list-style-type: none;
+}
+
+.altTextPrimary {
+    color: var(--accentPrimary);   
+}
+
+.altTextSecondary {
     color: var(--accentSecondary);   
 }
 
-ul {
-    list-style-type: none;
+.bodySubtext {
+    color: var(--accentSecondary);
 }
 
 /* Nav */
@@ -79,10 +107,6 @@ header {
     align-items: center;
     width: 100%;
     height: 10vh;
-}
-
-header h1 {
-    color: var(--accentPrimary);
 }
 
 header h1:hover{
@@ -107,15 +131,13 @@ header #primaryNav li a:hover{
     text-decoration: underline;
 }
 
-/* Sections */
+/* Full Page Sections */
 
 .fullPageSection {
     height: 90vh;
 }
 
-/* Home: Hero */
-
-#homeHero .content {
+.fullPageSection .content {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -123,19 +145,13 @@ header #primaryNav li a:hover{
     width: 84%;
 }
 
-#homeHero .content h1 {
-    color: var(--accentPrimary);
-    text-align: center;
-    margin: 0%;
-}
+/* Home: Hero */
 
-#homeHero .content h2 {
+#homeHero {
     text-align: center;
-    margin: 0%;
-}
-
-#homeHero .content #subtitleAltText {
-    color: var(--accentSecondary);
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
 }
 
 /* Home: Projects */
@@ -169,18 +185,9 @@ header #primaryNav li a:hover{
     margin: 0;
 }
 
-#projects .projectCard .projectText h2 {
-    color: var(--accentPrimary);
-}
-
 /* About: Hero */
 
 #aboutHero .content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 84%;
     display: flex;
     align-items: center;
     gap: 2%;
