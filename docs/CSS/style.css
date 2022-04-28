@@ -58,6 +58,12 @@ p {
     font-size: 18px;
 }
 
+.subtext {
+    color: var(--accentSecondary);   
+    font-size: 14px;
+    margin: 0;
+}
+
 ul {
     list-style-type: none;
 }
@@ -109,7 +115,7 @@ header #primaryNav li a:hover{
     height: 90vh;
 }
 
-/* Home Hero */
+/* Home: Hero */
 
 #homeHero .content {
     position: absolute;
@@ -132,6 +138,36 @@ header #primaryNav li a:hover{
 
 #homeHero .content #subtitleAltText {
     color: var(--accentSecondary);
+}
+
+/* Home: Projects */
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    margin-bottom: 100px;
+}
+
+#projects .projectCard {
+    display: flex;
+    height: 308px;
+}
+
+#projects .projectCard .projectText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#projects .projectCard .projectText .projectDesc {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#projects .projectCard .projectText h2 {
+    color: var(--accentPrimary);
 }
 
 /* About Hero */
