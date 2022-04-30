@@ -18,6 +18,10 @@ body {
     margin: 0% 5%;
 }
 
+* {
+    scroll-behavior: smooth !important;
+}
+
 /* Text  */
 
 h1, h2, p, a {
@@ -81,15 +85,15 @@ ul {
     flex-direction: column-reverse;
     margin-bottom: 7%;
     text-align: center;
+    text-decoration: none;
 }
 
 .arrowLink .arrowLinkText {
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: underline;
     color: var(--accentSecondary);
     display: none;
-}
-
-.arrowLink .arrowLinkText:hover {
-    text-decoration: underline; /* behaves differently than normal links */
 }
 
 .arrowLink .material-icons.md-48 { 
@@ -171,7 +175,7 @@ header #primaryNav li a:hover{
     display: flex;
     flex-direction: column;
     gap: 100px;
-    margin-bottom: 100px;
+    padding: 100px 0px 100px 0px;
 }
 
 #projects .projectCard {
