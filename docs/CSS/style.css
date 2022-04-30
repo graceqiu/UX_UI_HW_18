@@ -18,26 +18,6 @@ body {
     margin: 0% 5%;
 }
 
-/* Arrow Links */
-
-.arrowLink {
-    display: none;
-}
-
-.material-icons.md-48 { 
-    font-size: 48px; 
-    margin-bottom: 10%;
-    color: var(--accentPrimary);
-}
-
-.material-icons.md-48:hover + .arrowLink {
-    font-size: 36px; 
-    margin-bottom: 10%;
-    color: var(--accentSecondary);
-    transition: .1s;
-    display: block;
-}
-
 /* Text  */
 
 h1, h2, p, a {
@@ -94,6 +74,38 @@ ul {
     color: var(--accentSecondary);
 }
 
+/* Arrow Links */
+
+.arrowLink {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 7%;
+    text-align: center;
+}
+
+.arrowLink .arrowLinkText {
+    color: var(--accentSecondary);
+    display: none;
+}
+
+.arrowLink .arrowLinkText:hover {
+    text-decoration: underline; /* behaves differently than normal links */
+}
+
+.arrowLink .material-icons.md-48 { 
+    font-size: 48px; 
+    color: var(--accentPrimary);
+}
+
+.arrowLink .material-icons.md-48:hover {
+    font-size: 36px; 
+    color: var(--accentSecondary);
+}
+
+.arrowLink .material-icons.md-48:hover + .arrowLinkText {
+    display: block;
+}
+
 /* Nav */
 
 header a {
@@ -135,9 +147,11 @@ header #primaryNav li a:hover{
 
 .fullPageSection {
     height: 90vh;
+    display: flex;
+    flex-direction: column-reverse; /* for arrow links to align bottom */
 }
 
-.fullPageSection .content {
+.fullPageSection .absoluteCenteredContent {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -149,9 +163,6 @@ header #primaryNav li a:hover{
 
 #homeHero {
     text-align: center;
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
 }
 
 /* Home: Projects */
@@ -187,30 +198,30 @@ header #primaryNav li a:hover{
 
 /* About: Hero */
 
-#aboutHero .content {
+#aboutHero .absoluteCenteredContent {
     display: flex;
     align-items: center;
     gap: 2%;
 }
 
-#aboutHero .content #aboutText{
+#aboutHero .absoluteCenteredContent #aboutText{
     height: 410px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-#aboutHero .content #aboutText #aboutAltText{
+#aboutHero .absoluteCenteredContent #aboutText #aboutAltText{
     color: var(--accentPrimary);
 }
 
-#aboutHero .content img {
+#aboutHero .absoluteCenteredContent img {
     width: 481px;
     height: 410px;
     object-fit: cover;
 }
 
-#aboutHero .content #skillsGrid {
+#aboutHero .absoluteCenteredContent #skillsGrid {
     display: grid;
     grid-template-areas: 
     "skillType skillDetails"
@@ -220,11 +231,11 @@ header #primaryNav li a:hover{
     row-gap: 10px;
 }
 
-#aboutHero .content #skillsGrid p {
+#aboutHero .absoluteCenteredContent #skillsGrid p {
     text-transform: lowercase;
 }
 
-#aboutHero .content #skillsGrid .skillType {
+#aboutHero .absoluteCenteredContent #skillsGrid .skillType {
     color: var(--accentSecondary);
 }
 
