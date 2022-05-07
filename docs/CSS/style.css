@@ -60,6 +60,7 @@ a:hover {
 p {
     font-family: var(--fontPrimary);
     font-size: 18px;
+    font-weight: 300;
 }
 
 ul {
@@ -76,6 +77,8 @@ ul {
 
 .bodySubtext {
     color: var(--accentSecondary);
+    font-weight: 500;
+    text-transform: lowercase;
 }
 
 /* Arrow Links */
